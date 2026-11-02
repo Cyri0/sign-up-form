@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@800&display=swap");
+
+
+:root {
+  /* Layout */
+  --layout-width-mobile: 375px;
+  --layout-width-desktop: 1440px;
+  --layout-min-width: 320px;
+
+  /* Colors – Neutral */
+  --color-neutral-950: hsl(214 37% 4%);
+  --color-neutral-900: hsl(210 39% 7%);
+  --color-neutral-800: hsl(211 30% 13%);
+  --color-neutral-700: hsl(211 22% 24%);
+  --color-neutral-600: hsl(210 18% 42%);
+  --color-neutral-500: hsl(211 14% 50%);
+  --color-neutral-400: hsl(211 13% 55%);
+  --color-neutral-300: hsl(211 18% 68%);
+  --color-neutral-100: hsl(208 49% 92%);
+  --color-neutral-50: hsl(204 60% 97%);
+
+  /* Colors – Lime */
+  --color-lime-500: hsl(77 90% 59%);
+  --color-lime-700: hsl(77 67% 39%);
+
+  /* Colors – Red */
+  --color-red-400: hsl(4 100% 74%);
+
+  /* Colors – Amber */
+  --color-amber-400: hsl(40 100% 65%);
+
+  /* Colors – Navy */
+  --color-navy-950: hsl(214 60% 2%);
+
+  /* Colors – Transparent */
+  --color-lime-alpha-60: hsl(77 90% 59% / 0.6);
+  --color-lime-alpha-40: hsl(77 90% 59% / 0.4);
+  --color-navy-alpha-80: hsl(214 60% 2% / 0.8);
+  --color-navy-alpha-60: hsl(214 60% 2% / 0.6);
+
+  /* Typography – Families */
+  --font-display: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Typography – Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-display: 800;
+
+  /* Typography – Body */
+  --font-size-input: 16px;
+
+  /* Typography – Letter spacing */
+  --letter-spacing-wide: 0.16em;
+  --letter-spacing-display: 0.04em;
+
+  /* Spacing (4px scale) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Border radius */
+  --radius: 0;
+}
+
+/* ==========================================================================
+   Text presets
+   ========================================================================== */
+
+/* Preset 1: Orbitron 800, 72px / 80px, uppercase */
+.text-preset-1 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: var(--letter-spacing-display);
+  text-transform: uppercase;
+}
+
+@media (max-width: 1023px) {
+  /* Tablet: 40px / 48px */
+  .text-preset-1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile: 36px / 40px */
+  .text-preset-1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+/* Preset 2: Orbitron 800, 24px / 32px */
+.text-preset-2 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: var(--letter-spacing-display);
+}
+
+/* Preset 3: Orbitron 800, 16px / 24px */
+.text-preset-3 {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Preset 4: JetBrains Mono 400, 16px / 24px */
+.text-preset-4 {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Masked password variant of Preset 4 */
+.text-preset-4-masked {
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Preset 5: JetBrains Mono 400, 14px / 24px */
+.text-preset-5 {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* Preset 5 (bold): JetBrains Mono 700, 14px / 24px, uppercase */
+.text-preset-5-bold {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+/* Preset 6: JetBrains Mono 400, 12px / 16px, uppercase */
+.text-preset-6 {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+/* Preset 7: JetBrains Mono 400, 12px / 16px */
+.text-preset-7 {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-input);
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-50);
+}
+
+input,
+button,
+textarea,
+select {
+  font-size: var(--font-size-input); /* Prevents iOS zoom on focus */
+}
+
+/* Error text connected to its field via aria-describedby */
+.field-error {
+  color: var(--color-red-400);
+}
